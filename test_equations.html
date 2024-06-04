@@ -4,17 +4,7 @@
 <head>
     <title>Test equations</title>
     <meta charset="utf-8">
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$']]
-            },
-            svg: {
-                fontCache: 'global'
-            }
-        };
-    </script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
+
     <!-- <link rel="stylesheet" href="style_remark.css"> -->
 
 </head>
@@ -25,7 +15,19 @@
         var slideshow = remark.create({
             sourceUrl: 'test_equations.md'
         });
+        // MathJax.typesetPromise(); // doesn't help
     </script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script>
 </body>
 
 </html>
